@@ -3,11 +3,14 @@ name: Conda Test Environment, with micromamba
 on:
   push:
     branches:
-      - v2.16.x
+      - main
+      - developmemt
+      - v2.*
   pull_request:
     branches:
-      - v2.16.x
-
+      - '**'
+  workflow_dispatch:
+  
 jobs:
   test:
     runs-on: [ubuntu-latest] #, macos-latest]
